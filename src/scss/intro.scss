@@ -1,0 +1,40 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap");
+
+$prime-color: #a11a1a;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 35px;
+}
+
+.container {
+  background-color: #a11a1a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.logo {
+  height: 53vh;
+  width: 33vh;
+  &:hover {
+    // cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png"),
+    cursor: url("../img/logo.png"), auto;
+  }
+}
