@@ -1,11 +1,12 @@
 /** @format */
+import React from "react";
 
-const Map = () => {
+function Map() {
   return (
-    <div>
+    <div className="map">
       <h1>this is MAp</h1>
     </div>
   );
-};
+}
 
 export default Map;

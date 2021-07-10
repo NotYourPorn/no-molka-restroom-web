@@ -2,79 +2,60 @@
 
 import React from "react";
 
-export const sidebarData = [
+import * as FaIcons from "react-icons/fa";
+import * as FiIcons from "react-icons/fi";
+import * as BiIcons from "react-icons/bi";
+import * as CgIcons from "react-icons/cg";
+import * as GoIcons from "react-icons/go";
+import * as IoIcons from "react-icons/io5";
+
+export const SidebarData = [
   {
-    //   열기, 닫기
+    icon: <FaIcons.FaAngleDoubleRight />,
     title: "",
-    cName: "nav-title",
-  },
-  {
-    title: "지도",
-    // icon :
-    cName: "nav-title",
-  },
-  {
-    title: "안전 화장실 지도",
     path: "/",
-    cName: "nav-title",
-    // path:
+    cName: "nav-text",
   },
   {
-    title: "적발 화장실 지도",
-    path: "/",
-    cName: "nav-title",
-    // path:
-  },
-  {
+    icon: <BiIcons.BiCameraOff />,
     title: "불법 촬영 근절",
-    cName: "nav-title",
+    path: "/map",
+    cName: "nav-text",
   },
   {
-    title: "불법 촬영 카메라 정보",
-    cName: "nav-title",
-    // path:
-  },
-  {
-    title: "몰카 탐지 전문 업체",
-    cName: "nav-title",
-    // path:
-  },
-  {
+    icon: <CgIcons.CgComment />,
     title: "게시판",
-    // icon :
-
-    cName: "nav-title",
-    // path:
+    path: "/board",
+    cName: "nav-text",
   },
   {
-    title: "뉴스",
-    // icon :
-
-    cName: "nav-title",
-    // path:
+    icon: <BiIcons.BiNews />,
+    title: "News",
+    path: "/news",
+    cName: "nav-text",
   },
   {
-    title: "제보하기",
-    // icon :
-    cName: "nav-title",
-    // path:
+    icon: <GoIcons.GoReport />,
+    title: "Report",
+    path: "/reports",
+    cName: "nav-text",
   },
   {
-    title: "Q&A",
-    cName: "nav-title",
-    // icon :
-    // path:
+    icon: <FaIcons.FaRegQuestionCircle />,
+    title: "F&Q",
+    path: "/fnq",
+    cName: "nav-text",
   },
   {
+    icon: <FiIcons.FiPhone />,
     title: "Contact Us",
-    cName: "nav-title",
-    // icon :
-    // path:
+    path: "/contact",
+    cName: "nav-text",
   },
   {
-    title: "Story",
-    cName: "nav-title",
-    // icon :
-    // path:
+    icon: <IoIcons.IoPeopleCircle />,
+    title: "About Us",
+    cName: "nav-text",
+    path: "/about-us",
   },
 ];
