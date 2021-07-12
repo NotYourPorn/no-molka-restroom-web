@@ -1,0 +1,10 @@
+/** @format */
+* {
+  text-decoration: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

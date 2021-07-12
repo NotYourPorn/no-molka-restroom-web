@@ -9,23 +9,23 @@ import * as CgIcons from "react-icons/cg";
 import * as GoIcons from "react-icons/go";
 import * as IoIcons from "react-icons/io5";
 
-export const SidebarData = [
-  {
-    icon: <FaIcons.FaAngleDoubleRight />,
-    title: "",
-    path: "/",
-    cName: "nav-text",
-  },
+export const NavbarData = [
   {
     icon: <BiIcons.BiCameraOff />,
-    title: "불법 촬영 근절",
+    title: "Map",
     path: "/map",
     cName: "nav-text",
   },
   {
     icon: <CgIcons.CgComment />,
-    title: "게시판",
+    title: "Board",
     path: "/board",
+    cName: "nav-text",
+  },
+  {
+    icon: <IoIcons.IoSearchSharp />,
+    title: "Search",
+    path: "/search",
     cName: "nav-text",
   },
   {
@@ -48,13 +48,13 @@ export const SidebarData = [
   },
   {
     icon: <FiIcons.FiPhone />,
-    title: "Contact Us",
+    title: "Contact",
     path: "/contact",
     cName: "nav-text",
   },
   {
     icon: <IoIcons.IoPeopleCircle />,
-    title: "About Us",
+    title: "About",
     cName: "nav-text",
     path: "/about-us",
   },

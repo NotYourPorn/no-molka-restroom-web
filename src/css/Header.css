@@ -1,0 +1,32 @@
+/** @format */
+/** @format */
+* {
+  text-decoration: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header {
+  background-color: #a11a1a;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Oswald", sans-serif;
+}
+
+.group-name {
+  color: whitesmoke;
+  font-size: 2.2vh;
+  padding-left: 20px;
+}

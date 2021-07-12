@@ -1,0 +1,17 @@
+/** @format */
+@import "designs.scss";
+
+.header {
+  background-color: $prime-color;
+  height: 60px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+}
+
+.group-name {
+  color: whitesmoke;
+  font-size: 2.2vh;
+  padding-left: 20px;
+}
