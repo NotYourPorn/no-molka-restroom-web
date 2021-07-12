@@ -1,10 +1,12 @@
 /** @format */
 import React from "react";
 
+import MapContent from "../components/MapContent";
+
 function Map() {
   return (
     <div className="map">
-      <h1>this is MAp</h1>
+      <MapContent />
     </div>
   );
 }
