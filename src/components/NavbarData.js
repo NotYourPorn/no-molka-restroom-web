@@ -42,8 +42,8 @@ export const NavbarData = [
   },
   {
     icon: <FaIcons.FaRegQuestionCircle />,
-    title: "F&Q",
-    path: "/fnq",
+    title: "Question",
+    path: "/question",
     cName: "nav-text",
   },
   {

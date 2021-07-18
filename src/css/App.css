@@ -9,7 +9,7 @@
 .about-us,
 .board,
 .contact,
-.fnq,
+.question,
 .map,
 .news,
 .not-found,
@@ -18,7 +18,8 @@
   height: 100vh;
   width: 100%;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: 3rem;
   background-color: #f5f3f4;
+  margin-left: 5px;
 }

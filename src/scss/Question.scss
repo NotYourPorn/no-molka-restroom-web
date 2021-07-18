@@ -1,0 +1,75 @@
+/** @format */
+@import "designs.scss";
+
+.question {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+section {
+  background-color: rgba(196, 196, 196, 0.24);
+  width: 100%;
+  height: 100%;
+  // overflow: hidden;
+}
+
+header {
+  margin-top: 2vh;
+  background-color: $prime-color-2;
+  color: white;
+}
+
+.question-title {
+  font-size: 2.5rem;
+  width: 100%;
+}
+
+.question-slider {
+  background-color: $prime-color-2;
+  border-radius: 20px;
+  color: white;
+}
+
+.questions {
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s;
+}
+
+.question-box {
+  margin-top: 5.5vh;
+  margin-left: 5vh;
+  width: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.question-list,
+.answer-list {
+  font-size: 3.5vh;
+  background-color: white;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border: 2px solid;
+  border-radius: 4vh;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  min-height: 20vh;
+  align-items: center;
+}
+
+.question-line-1 {
+  background-color: $prime-color-3;
+  height: 0.5vh;
+  width: 12.5vh;
+  margin: 0 auto;
+}
+
+.question-line-2 {
+  background-color: black;
+  height: 0.5vh;
+}

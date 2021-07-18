@@ -19,8 +19,8 @@ body {
   height: 100vh;
   width: 63px;
   background: #161a1d;
-  -webkit-box-shadow: 10px 0 0 #a11a1a;
-          box-shadow: 10px 0 0 #a11a1a;
+  -webkit-box-shadow: 10px 0 0 #660708;
+          box-shadow: 10px 0 0 #660708;
   overflow-x: hidden;
   -webkit-transition: width 0.5s;
   transition: width 0.5s;

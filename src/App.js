@@ -10,7 +10,7 @@ import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs";
 import Board from "./pages/Board";
 import Contact from "./pages/Contact";
-import FnQ from "./pages/FnQ";
+import Question from "./pages/Question";
 import Map from "./pages/Map";
 import News from "./pages/News";
 import NotFound from "./pages/NotFound";
@@ -27,7 +27,7 @@ function App() {
             <Route path="/" exact component={AboutUs} />
             <Route path="/board" exact component={Board} />
             <Route path="/contact" component={Contact} />
-            <Route path="/fnq" component={FnQ} />
+            <Route path="/question" component={Question} />
             <Route path="/map" component={Map} />
             <Route path="/search" component={Search} />
             <Route path="/news" component={News} />

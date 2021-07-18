@@ -4,9 +4,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
 
-import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
-
 import { NavbarData } from "./NavbarData.js";
 import "../css/Navbar.css";
 
@@ -19,7 +16,17 @@ function Navbar() {
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <nav className={nav ? "nav" : "nav active"}>
+          <ul>
+            <li className="logo-text">
+              <img src="../img/logo.png" className="logo-img" alt="" />
+              낫유포
+            </li>
+          </ul>
           <ul className="nav-menu-items" onClick={showNav}>
+            {/* <li className="logo">
+              <img src="../img/logo.png" alt="" />
+              낫유포
+            </li> */}
             {NavbarData.map((item, index) => {
               return (
                 <li key={index} className={item.cName}>
