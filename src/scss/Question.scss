@@ -11,17 +11,18 @@
 section {
   background-color: rgba(196, 196, 196, 0.24);
   width: 100%;
-  height: 100%;
-  // overflow: hidden;
+  height: 95vh;
+  overflow: hidden;
 }
 
 header {
-  margin-top: 2vh;
   background-color: $prime-color-2;
   color: white;
+  width: 100%;
 }
 
 .question-title {
+  margin-top: 0.5rem;
   font-size: 2.5rem;
   width: 100%;
 }
@@ -34,30 +35,29 @@ header {
 
 .questions {
   display: flex;
-  // flex-direction: column;
+  position: relative;
+  justify-content: center;
   align-items: center;
-  transition: transform 0.5s;
+  height: 100%;
 }
 
 .question-box {
-  margin-top: 5.5vh;
-  margin-left: 5vh;
-  width: 80vh;
+  margin-top: 10vh;
+  height: 100%;
+  width: 75vh;
   display: flex;
-  flex-direction: column;
 }
 
 .question-list,
 .answer-list {
-  font-size: 3.5vh;
+  font-size: 3vh;
   background-color: white;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
   border: 2px solid;
   border-radius: 4vh;
   display: flex;
   justify-content: center;
-  height: 100%;
   min-height: 20vh;
   align-items: center;
 }
@@ -72,4 +72,41 @@ header {
 .question-line-2 {
   background-color: black;
   height: 0.5vh;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  position: absolute;
+  width: 70%;
+  opacity: 0;
+  transition-duration: 1s ease;
+  top: 6%;
+  left: 15%;
+  right: 15%;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
 }

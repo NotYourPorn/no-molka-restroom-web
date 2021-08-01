@@ -21,7 +21,7 @@ function Question() {
 
       <section>
         <div className="questions">
-          <QuestionSlider />
+          <QuestionSlider slides={QuestionData} />
         </div>
       </section>
     </div>
