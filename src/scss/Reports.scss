@@ -1,0 +1,84 @@
+/** @format */
+@import "designs.scss";
+* {
+  font-family: "Oswald", sans-serif;
+}
+h1 {
+  font-size: larger;
+}
+
+p {
+  font-size: medium;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  margin-left: 5%;
+  height: 4vh;
+  width: 70vh;
+}
+
+.reports {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  text-align: center;
+  flex-direction: column;
+}
+
+.border-line {
+  width: 80%;
+  height: 0.08rem;
+  background-color: black;
+  margin: auto auto;
+}
+
+.type-box {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 5%;
+}
+
+.type {
+  display: flex;
+  flex-direction: column;
+  background-color: $prime-color-3;
+  width: 12%;
+  height: 12%;
+  margin-left: 4%;
+  align-items: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  p {
+    font-size: small;
+  }
+}
+
+.title-box,
+.location-box,
+.content-box,
+.photo-box {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  display: flex;
+  justify-content: center;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  color: white;
+  font-size: medium;
+  background-color: $prime-color-3;
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 5px;
+  border-style: none;
+}
