@@ -1,0 +1,98 @@
+/** @format */
+/** @format */
+* {
+  text-decoration: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: red;
+  overflow: hidden;
+}
+
+.page-name {
+  margin-bottom: 20%;
+}
+
+.input-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin-left: 7%;
+  color: white;
+}
+
+.name-box,
+.email-box,
+.message-box {
+  margin-bottom: 15%;
+}
+
+.email-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.email-info span {
+  margin-left: 5%;
+  font-size: 1.2rem;
+}
+
+.line {
+  background-color: white;
+  height: 0.1rem;
+}
+
+.info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: white;
+  border-left: 130px solid red;
+  border-bottom: 950px solid transparent;
+}
+
+.info-box img {
+  width: 40%;
+}
+
+.info-innerbox {
+  position: absolute;
+  top: 60%;
+}
+
+.Logo {
+  width: 50%;
+}

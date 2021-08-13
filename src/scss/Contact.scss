@@ -1,0 +1,72 @@
+/** @format */
+
+@import "designs.scss";
+
+* {
+  font-family: "Fira Sans", sans-serif;
+}
+
+.contact {
+  display: flex;
+  background-color: red;
+  overflow: hidden;
+}
+
+.page-name {
+  margin-bottom: 20%;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 7%;
+  color: white;
+}
+
+.name-box,
+.email-box,
+.message-box {
+  margin-bottom: 15%;
+}
+
+.email-info {
+  display: flex;
+  line-height: 80%;
+  justify-content: center;
+
+  span {
+    margin-left: 5%;
+    font-size: 1.2rem;
+  }
+}
+
+.line {
+  background-color: white;
+  height: 0.1rem;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  border-left: 130px solid red;
+  border-bottom: 950px solid transparent;
+
+  img {
+    width: 40%;
+  }
+}
+
+.info-innerbox {
+  position: absolute;
+  top: 60%;
+}
+
+.Logo {
+  width: 50%;
+}

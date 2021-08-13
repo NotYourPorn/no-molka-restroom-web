@@ -1,10 +1,17 @@
 /** @format */
 @import "designs.scss";
+
 * {
   font-family: "Oswald", sans-serif;
 }
-h1 {
-  font-size: larger;
+
+header {
+  height: 2.5rem;
+}
+
+.page-title {
+  margin-left: 2%;
+  font-size: 1.5rem;
 }
 
 p {
@@ -13,6 +20,10 @@ p {
   align-items: center;
 }
 
+h1 {
+  margin-top: 2%;
+  font-size: 3rem;
+}
 input {
   margin-left: 5%;
   height: 4vh;
@@ -48,15 +59,18 @@ section {
   display: flex;
   flex-direction: column;
   background-color: $prime-color-3;
-  width: 12%;
+  width: 13%;
   height: 12%;
-  margin-left: 4%;
+  margin-left: 5.5%;
   align-items: center;
   padding-top: 1%;
   padding-bottom: 1%;
-  p {
-    font-size: small;
-  }
+}
+
+.report-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
 }
 
 .title-box,
@@ -67,12 +81,17 @@ section {
   margin-bottom: 3%;
   display: flex;
   justify-content: center;
+
+  .photo-submit-box {
+    display: flex;
+  }
 }
 
 .text-box {
   display: flex;
   flex-direction: column;
 }
+
 button {
   color: white;
   font-size: medium;

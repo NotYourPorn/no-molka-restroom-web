@@ -18,7 +18,7 @@ const ReportTypes = [
   },
   {
     icon: <AiIcons.AiOutlineSafety />,
-    type: "점검 화장실",
+    type: "점검 장소",
     explain: "몰카 점검 장소",
   },
 ];
@@ -27,7 +27,7 @@ function Reports() {
   return (
     <div className="reports">
       <header>
-        <h1>제보하기</h1>
+        <p className="page-title">제보하기</p>
       </header>
       <section>
         <h1>분류</h1>
@@ -36,7 +36,7 @@ function Reports() {
             return (
               <div className="type">
                 <span className="report-icon">{report.icon}</span>
-                <p>{report.type}</p>
+                <p className="report-title">{report.type}</p>
                 <p>{report.explain}</p>
               </div>
             );
@@ -59,8 +59,10 @@ function Reports() {
           <div className="border-line"></div>
         </div>
         <div className="photo-box">
-          <p>사진 첨부</p>
-          <input type="text" />
+          <div className="photo-submit-box">
+            <p>사진 첨부</p>
+            <input type="text" />
+          </div>
           <p>이미지를 첨부해주세요.</p>
         </div>
         <button>제출</button>

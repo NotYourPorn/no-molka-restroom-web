@@ -14,8 +14,13 @@
   font-family: "Oswald", sans-serif;
 }
 
-h1 {
-  font-size: larger;
+header {
+  height: 2.5rem;
+}
+
+.page-title {
+  margin-left: 2%;
+  font-size: 1.5rem;
 }
 
 p {
@@ -26,6 +31,11 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+h1 {
+  margin-top: 2%;
+  font-size: 3rem;
 }
 
 input {
@@ -80,9 +90,9 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #ba181b;
-  width: 12%;
+  width: 13%;
   height: 12%;
-  margin-left: 4%;
+  margin-left: 5.5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -90,8 +100,10 @@ section {
   padding-bottom: 1%;
 }
 
-.type p {
-  font-size: small;
+.report-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
 }
 
 .title-box,
@@ -106,6 +118,15 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.title-box .photo-submit-box,
+.location-box .photo-submit-box,
+.content-box .photo-submit-box,
+.photo-box .photo-submit-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .text-box {
