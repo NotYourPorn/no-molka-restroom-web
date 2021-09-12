@@ -1,20 +1,28 @@
 const { gql } = require('apollo-server');
 
 module.exports = gql`
-    type Rent{
-        id : ID!
-        rent_city: String!
-        rent_item: String!
-        rent_method : String!
-        rent_period : String!
-        rent_condition : [String]!
-    }
+  type City {
+    id: ID!
+    name : String!
+    item : String!
+    method : String!
+    condition : String!
+    period : String!
+    places : [Place]!
+  }
 
-    type RentDetail{
-        city_id : ID!
-        name : String!
-        phone : String!
-        address : String!
-        coordinate : [String]!
-    }
-`
+  type Place {
+    id : ID!
+    cityId : String!
+    name : String!
+    phone : String!
+    address : String!
+    pos : [String]!
+    cities : [City]!
+  }
+
+  type Query {
+    cities(name : String!) : [City]!
+    places(cityId : String!) : [Place]
+  }
+`;
