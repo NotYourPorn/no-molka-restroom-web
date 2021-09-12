@@ -25,3 +25,6 @@ yarn-error.log*
 #API_KEY, PASSWORD
 .env
 .config.js
+
+# temp data
+.src/storage

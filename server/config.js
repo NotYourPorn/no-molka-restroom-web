@@ -1,5 +1,5 @@
 module.exports = {
     MONGODB:
-      "mongodb+srv://dbAdmin:5KIcAYzV8bRhKIbN@cluster0.jfncq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+      "mongodb+srv://dbAdmin:SwA8fLhmTFPGSuzM@cluster0.jfncq.mongodb.net/Rent?retryWrites=true&w=majority",
   };
   
