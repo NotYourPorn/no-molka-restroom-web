@@ -11,9 +11,15 @@ import * as IoIcons from "react-icons/io5";
 
 export const NavbarData = [
   {
-    icon: <BiIcons.BiCameraOff />,
+    icon: <BiIcons.BiArchive />,
     title: "Map",
     path: "/map",
+    cName: "nav-text",
+  },
+  {
+    icon: <GoIcons.GoKey />,
+    title: "Rent",
+    path: "/rent",
     cName: "nav-text",
   },
   {

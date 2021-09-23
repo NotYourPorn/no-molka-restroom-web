@@ -1,9 +1,11 @@
 /** @format */
 
 /*global kakao*/
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const MapContent = () => {
+  const [places, setPlaces] = useState([]);
+
   useEffect(() => {
     var container = document.getElementById("map");
     var options = {
@@ -15,7 +17,7 @@ const MapContent = () => {
 
   return (
     <div className="map-box">
-      <div id="map" style={{ width: "100%", height: "100%" }}></div>
+      <div id="map" style={{ flex: "1", height: "100%" }}></div>
     </div>
   );
 };

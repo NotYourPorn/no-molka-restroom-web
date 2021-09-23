@@ -14,6 +14,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 62.5%;
+  list-style-type: none;
 }
 
 section {
@@ -27,13 +29,49 @@ section {
   height: 100%;
 }
 
-.search-box {
+.logo-box {
+  height: 44px;
+  padding-top: 14px;
+  padding-right: 19px;
+  padding-left: 24px;
+  background-color: #ba181b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+}
+
+.logo-box .service-name {
+  font-size: 2.6em;
+  font-weight: 600;
+}
+
+.around-box {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.around-box p {
+  font-size: 1.3em;
+}
+
+.around-box svg {
+  margin-left: 5px;
+  font-size: 1.8em;
+}
+
+.search-bar {
   height: 100%;
-  width: 30%;
+  width: 430px;
   background-color: #faf8f8;
 }
 
-.search-area {
+.search-box {
   background-color: #ba181b;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,37 +79,58 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 15vh;
+  height: 75px;
+}
+
+.search-box .search-area {
+  background-color: white;
+  margin-left: 25px;
+  border-radius: 8px;
+  width: 260px;
+}
+
+.search-box .search-area button {
+  color: black;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+}
+
+.search-box svg {
+  font-size: 19px;
+  vertical-align: sub;
 }
 
 .search-input {
-  width: 82%;
-  height: 6.3vh;
-  margin-left: 1%;
-  border-radius: 10px;
+  width: 220px;
+  height: 44px;
+  margin: 0;
+  font-size: 18px;
+  border-radius: 8px;
   border-style: none;
+  background-color: white;
+}
+
+input:focus {
+  outline: none;
 }
 
 .map-box {
-  width: 70%;
+  width: 100%;
   height: 100%;
 }
 
 .search-icon {
   position: absolute;
   font-size: 1.5rem;
-  line-height: 1.5rem;
-  margin-left: 19%;
 }
 
 .search-result-box {
-  height: 78vh;
+  height: calc(93% - 95px);
   background-color: white;
   border-top: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
+  overflow: scroll;
 }
 
 .type-box {
@@ -85,15 +144,6 @@ section {
 
 .type-box :hover {
   background-color: #e5e5e5;
-}
-
-.around-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
 }
 
 .type-icon {
@@ -121,23 +171,75 @@ section {
   width: 24px;
 }
 
-.type-icon-box {
+.city-info-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1.5%;
-  border-radius: 10px;
+  padding-left: 24px;
+  margin-top: 10px;
+  padding-bottom: 8px;
+  line-height: 1.9em;
+  border-bottom: 1.5px solid rgba(92, 92, 92, 0.5);
 }
 
-.type-icon-box p {
-  color: black;
+.city-info-box .city-name {
+  font-size: 2.3em;
+  font-weight: 600;
+}
+
+.city-info-box .city-count {
+  margin-left: 16px;
+  font-size: 1.4em;
+}
+
+.place-box {
+  text-align: start;
+  font-size: 1.3em;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  border-bottom: 1.5px solid rgba(92, 92, 92, 0.5);
+}
+
+.place-box .place-name {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.place-box .place-info-icon {
+  background-color: #ba181b;
+  color: white;
+  min-height: 42px;
+  max-height: 42px;
+  max-width: 42px;
+  min-width: 42px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 15%;
-  font-size: 0.8rem;
+  border-radius: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.place-box .place-info-icon svg {
+  height: 24px;
+  width: 24px;
+}
+
+.place-box .place-info-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.place-box:hover {
+  background-color: rgba(231, 242, 165, 0.42);
 }

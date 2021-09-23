@@ -1,29 +1,31 @@
-const Place = require('../../models/Rent/Place');
-const City = require('../../models/Rent/City');
+/** @format */
+
+const Place = require("../../models/Rent/Place");
+const City = require("../../models/Rent/City");
 
 module.exports = {
-    Query : {
-        places : async (_, { cityId }) => {
-            return places = await Place.find({cityId});
-        },
-        cities : async (_, { name }) => {
-            return cities = await City.find({ name : { $regex : name }});
-        }
+  Query: {
+    places: async (_, { cityId }) => {
+      return await Place.find({ cityId });
     },
-    City : {
-        async places(_, __){
-            const places = await Place.find();
-            return places.filter(place => {
-                return place.cityId == _.id;
-            });
-        }
+    cities: async (_, { name }) => {
+      return await City.find({ name: { $regex: name } });
     },
-    Place : {
-        async cities(_, __){
-            const cities = await City.find();
-            return cities.filter(city => {
-                return city.id == _.cityId;
-            })
-        }
-    }
-}
+  },
+  City: {
+    async places(_, __) {
+      const places = await Place.find();
+      return places.filter((place) => {
+        return place.cityId == _.id;
+      });
+    },
+  },
+  Place: {
+    async cities(_, __) {
+      const cities = await City.find();
+      return cities.filter((city) => {
+        return city.id == _.cityId;
+      });
+    },
+  },
+};
