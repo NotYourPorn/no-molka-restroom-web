@@ -135,7 +135,7 @@ input:focus {
 
 .city-info-box {
   display: flex;
-  padding-left: 24px;
+  padding-left: 13px;
   margin-top: 10px;
   padding-bottom: 8px;
   line-height: 1.9em;
@@ -155,17 +155,24 @@ input:focus {
 .place-box {
   text-align: start;
   font-size: 1.3em;
-  padding-bottom: 7px;
-  padding-top: 7px;
   border-bottom: 1.5px solid rgba(92, 92, 92, 0.5);
 
   .place-name {
     font-size: 1.4em;
     font-weight: 600;
-    margin-bottom: 5px;
+    height: 30px;
+    line-height: 30px;
     border-bottom: 1px solid #c4c4c4;
   }
 
+  .place-info-box {
+    padding-top: 7px;
+    padding-bottom: 8px;
+  }
+
+  li {
+    padding-left: 13px;
+  }
   .place-info-icon {
     background-color: $prime-color-3;
     color: white;
@@ -192,6 +199,10 @@ input:focus {
 
 .place-box:hover {
   background-color: rgba(231, 242, 165, 0.42);
+
+  .place-name {
+    color: blue;
+  }
 }
 // .type-icon-box {
 //   display: flex;

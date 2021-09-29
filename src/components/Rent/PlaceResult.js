@@ -1,6 +1,8 @@
 /** @format */
+import { FETCH_PLACES_QUERY } from "../../server/Data/RentQueries";
+
 import React, { useState } from "react";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 
 import * as MdIcons from "react-icons/md";
 import * as CgIcons from "react-icons/cg";
@@ -8,25 +10,6 @@ import * as IoIcons from "react-icons/io";
 import * as BiIcons from "react-icons/bi";
 import * as FaIcons from "react-icons/fa";
 import * as GoIcons from "react-icons/go";
-
-const FETCH_PLACES_QUERY = gql`
-  query places($cityId: String!) {
-    places(cityId: $cityId) {
-      cityId
-      name
-      phone
-      address
-      pos
-      cities {
-        id
-        item
-        condition
-        method
-        period
-      }
-    }
-  }
-`;
 
 const conditionCheck = (condition) => {
   if (condition.includes("C")) {

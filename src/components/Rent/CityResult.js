@@ -1,23 +1,7 @@
 /** @format */
 import React, { useState, useEffect } from "react";
-import { useQuery, gql } from "@apollo/client";
-
-const FETCH_CITIES_QUERY = gql`
-  query cities($cityName: String!) {
-    cities(name: $cityName) {
-      id
-      name
-      condition
-      places {
-        cityId
-        name
-        address
-        phone
-        pos
-      }
-    }
-  }
-`;
+import { useQuery } from "@apollo/client";
+import { FETCH_CITIES_QUERY } from "../../server/Data/RentQueries";
 
 const conditionCheck = (condition) => {
   if (condition.includes("C")) {
@@ -33,14 +17,6 @@ const CityResult = (props) => {
   const { loading, error, data } = useQuery(FETCH_CITIES_QUERY, {
     variables: { cityName: cityName },
   });
-
-  // const [currentCity, setCity] = useState();
-
-  // useEffect(() => {
-  //   if (loading === false && data) {
-  //     setCity(data);
-  //   }
-  // }, [loading, data]);
 
   return (
     <div>
@@ -58,9 +34,11 @@ const CityResult = (props) => {
                 return (
                   <div className="place-box">
                     <li className="place-name">{place.name}</li>
-                    <li>{place.address}</li>
-                    {conditionCheck(city.condition)}
-                    <li>{place.phone}</li>
+                    <div className="place-info-box">
+                      <li>{place.address}</li>
+                      {conditionCheck(city.condition)}
+                      <li>{place.phone}</li>
+                    </div>
                   </div>
                 );
               })}

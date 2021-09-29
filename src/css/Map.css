@@ -175,7 +175,7 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 24px;
+  padding-left: 13px;
   margin-top: 10px;
   padding-bottom: 8px;
   line-height: 1.9em;
@@ -195,16 +195,24 @@ input:focus {
 .place-box {
   text-align: start;
   font-size: 1.3em;
-  padding-bottom: 7px;
-  padding-top: 7px;
   border-bottom: 1.5px solid rgba(92, 92, 92, 0.5);
 }
 
 .place-box .place-name {
   font-size: 1.4em;
   font-weight: 600;
-  margin-bottom: 5px;
+  height: 30px;
+  line-height: 30px;
   border-bottom: 1px solid #c4c4c4;
+}
+
+.place-box .place-info-box {
+  padding-top: 7px;
+  padding-bottom: 8px;
+}
+
+.place-box li {
+  padding-left: 13px;
 }
 
 .place-box .place-info-icon {
@@ -242,4 +250,8 @@ input:focus {
 
 .place-box:hover {
   background-color: rgba(231, 242, 165, 0.42);
+}
+
+.place-box:hover .place-name {
+  color: blue;
 }

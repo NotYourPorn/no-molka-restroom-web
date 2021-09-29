@@ -2,6 +2,7 @@
 
 /*global kakao*/
 import React, { useEffect, useState, useCallback } from "react";
+
 import * as AiIcons from "react-icons/ai";
 import * as RiIcons from "react-icons/ri";
 
@@ -9,8 +10,10 @@ import MapTypeData from "./Map/MapTypeData";
 import CityResult from "./Rent/CityResult";
 import PlaceResult from "./Rent/PlaceResult";
 
+import { mapInfoVar } from "../server/cache";
+
 const MapSearch = () => {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState();
   const [cityName, setCityName] = useState();
 
   const handleChange = useCallback((e) => {
@@ -20,6 +23,7 @@ const MapSearch = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setCityName(searchText);
+    mapInfoVar(searchText);
     setSearchText("");
   };
 
@@ -47,7 +51,7 @@ const MapSearch = () => {
             onChange={handleChange}
             onSubmit={handleSubmit}
             onKeyPress={handleKeypress}
-            value={searchText}
+            value={searchText || ""}
           />
           <button className="search-btn" type="submit" onClick={handleSubmit}>
             <AiIcons.AiOutlineSearch />
