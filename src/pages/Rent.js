@@ -1,7 +1,6 @@
 /** @format */
 
-import { React, useState } from "react";
-import { useQuery, gql } from "@apollo/client";
+import { React } from "react";
 
 function Rent() {
   return (

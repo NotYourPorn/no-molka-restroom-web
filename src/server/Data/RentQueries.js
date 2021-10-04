@@ -1,7 +1,6 @@
 /** @format */
 
 import { gql } from "@apollo/client";
-import { mapInfoVar } from "../cache";
 
 export const FETCH_CITIES_QUERY = gql`
   query cities($cityName: String!) {
