@@ -26,7 +26,7 @@ const PlaceResult = () => {
     variables: { cityId },
   });
   return (
-    <div className="place-box">
+    <div className="info-box">
       {loading && "loading"}
       {error && "There is an error"}
       {data &&
