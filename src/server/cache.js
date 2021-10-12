@@ -16,4 +16,4 @@ export const cache = new InMemoryCache({
   },
 });
 
-export const mapInfoVar = makeVar("서울");
+export const mapInfoVar = makeVar("");

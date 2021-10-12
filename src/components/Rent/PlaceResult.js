@@ -20,15 +20,15 @@ const conditionCheck = (condition) => {
 };
 
 const PlaceResult = () => {
-  const [cityId, setCityId] = useState("613d5d6d509b4d6b3c2c2da6");
+  const [placeId, setPlaceId] = useState("613d5f927253176ceba70c05");
 
   const { loading, error, data } = useQuery(FETCH_PLACES_QUERY, {
-    variables: { cityId },
+    variables: { placeId },
   });
   return (
     <div className="info-box">
       {loading && "loading"}
-      {error && "There is an error"}
+      {error && "There is an error(place)"}
       {data &&
         data.places.map((place) => {
           return (

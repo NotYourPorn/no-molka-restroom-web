@@ -5,8 +5,8 @@ const City = require("../../models/Rent/City");
 
 module.exports = {
   Query: {
-    places: async (_, { cityId }) => {
-      return await Place.find({ cityId });
+    places: async (_, { id }) => {
+      return await Place.findOne({ where: { _id: id } });
     },
     cities: async (_, { name }) => {
       return await City.find({ name: { $regex: name } });

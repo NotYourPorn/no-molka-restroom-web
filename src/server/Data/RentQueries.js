@@ -20,8 +20,8 @@ export const FETCH_CITIES_QUERY = gql`
 `;
 
 export const FETCH_PLACES_QUERY = gql`
-  query getPlaces($cityId: String!) {
-    places(cityId: $cityId) {
+  query getPlaces($placeId: String!) {
+    places(id: $placeId) {
       cityId
       name
       phone

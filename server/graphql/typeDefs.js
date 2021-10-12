@@ -25,6 +25,6 @@ module.exports = gql`
 
   type Query {
     cities(name: String!): [City]!
-    places(cityId: String!): [Place]
+    places(id: ID!): Place
   }
 `;

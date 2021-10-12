@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import { FETCH_CITIES_QUERY } from "../../server/Data/RentQueries";
+import PlaceResult from "../Rent/PlaceResult";
 
 const conditionCheck = (condition) => {
   if (condition.includes("C")) {
@@ -12,11 +13,21 @@ const conditionCheck = (condition) => {
 };
 
 const CityResult = (props) => {
+  const [placeId, setPlaceId] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+
   const cityName = props.cityName;
 
   const { loading, error, data } = useQuery(FETCH_CITIES_QUERY, {
     variables: { cityName: cityName },
   });
+
+  const showPlaceInfo = (placeId, e) => {
+    e.preventDefault();
+    setPlaceId(placeId);
+    setIsOpen((isOpen) => !isOpen);
+    console.log(placeId);
+  };
 
   return (
     <div>
@@ -26,14 +37,21 @@ const CityResult = (props) => {
         data.cities.map((city) => {
           return (
             <div className="city-box">
-              <div className="city-info-box">
+              <div className="city-info-box" key={city.id}>
                 <li className="city-name">{city.name}</li>
                 <li className="city-count">{city.places.length}곳</li>
               </div>
               {city.places.map((place) => {
                 return (
-                  <div className="place-box">
+                  <div
+                    className="place-box"
+                    key={place.id}
+                    onClick={(e) => {
+                      showPlaceInfo(place.id, e);
+                    }}
+                  >
                     <li className="place-name">{place.name}</li>
+                    {/* <PlaceResult className="place-indiv" cityId = {placeId}/> */}
                     <div className="place-info-box">
                       <li>{place.address}</li>
                       {conditionCheck(city.condition)}
