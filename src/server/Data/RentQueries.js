@@ -9,6 +9,7 @@ export const FETCH_CITIES_QUERY = gql`
       name
       condition
       places {
+        id
         cityId
         name
         address
@@ -20,9 +21,10 @@ export const FETCH_CITIES_QUERY = gql`
 `;
 
 export const FETCH_PLACES_QUERY = gql`
-  query getPlaces($placeId: String!) {
+  query getPlaces($placeId: ID!) {
     places(id: $placeId) {
       cityId
+      id
       name
       phone
       address

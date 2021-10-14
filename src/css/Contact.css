@@ -65,7 +65,7 @@
   height: 0.1rem;
 }
 
-.info-box {
+.contact-info-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,7 +84,7 @@
   border-bottom: 950px solid transparent;
 }
 
-.info-box img {
+.contact-info-box img {
   width: 40%;
 }
 

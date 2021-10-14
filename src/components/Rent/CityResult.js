@@ -14,8 +14,7 @@ const conditionCheck = (condition) => {
 
 const CityResult = (props) => {
   const [placeId, setPlaceId] = useState();
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [openedPlaceId, setOpenedPlaceId] = useState(undefined);
   const cityName = props.cityName;
 
   const { loading, error, data } = useQuery(FETCH_CITIES_QUERY, {
@@ -25,8 +24,7 @@ const CityResult = (props) => {
   const showPlaceInfo = (placeId, e) => {
     e.preventDefault();
     setPlaceId(placeId);
-    setIsOpen((isOpen) => !isOpen);
-    console.log(placeId);
+    setOpenedPlaceId(placeId);
   };
 
   return (
@@ -51,12 +49,16 @@ const CityResult = (props) => {
                     }}
                   >
                     <li className="place-name">{place.name}</li>
-                    {/* <PlaceResult className="place-indiv" cityId = {placeId}/> */}
-                    <div className="place-info-box">
-                      <li>{place.address}</li>
-                      {conditionCheck(city.condition)}
-                      <li>{place.phone}</li>
-                    </div>
+                    {openedPlaceId === place.id && (
+                      <PlaceResult className="place-indiv" placeId={placeId} />
+                    )}
+                    {!(openedPlaceId === place.id) && (
+                      <div className="place-info-box">
+                        <li>{place.address}</li>
+                        {conditionCheck(city.condition)}
+                        <li>{place.phone}</li>
+                      </div>
+                    )}
                   </div>
                 );
               })}

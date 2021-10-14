@@ -19,93 +19,91 @@ const conditionCheck = (condition) => {
   }
 };
 
-const PlaceResult = () => {
-  const [placeId, setPlaceId] = useState("613d5f927253176ceba70c05");
+const PlaceResult = (props) => {
+  const currentId = props.placeId;
 
   const { loading, error, data } = useQuery(FETCH_PLACES_QUERY, {
-    variables: { placeId },
+    variables: { placeId: currentId },
   });
   return (
     <div className="info-box">
       {loading && "loading"}
-      {error && "There is an error(place)"}
-      {data &&
-        data.places.map((place) => {
-          return (
-            <div className="place-detail-box">
-              <li className="place-name">{place.name}</li>
-              <div className="place-info-list">
-                <div className="place-info-icon">
-                  <MdIcons.MdLocationOn />
-                </div>
-                <div>
-                  <p>주소</p>
-                  <li>{place.address}</li>
-                </div>
-              </div>
-              <div className="place-info-list">
-                <div className="place-info-icon">
-                  <FaIcons.FaPhoneAlt />
-                </div>
-                <div>
-                  <p>전화번호</p>
-                  <li>{place.phone}</li>
-                </div>
-              </div>
-              {place.cities.map((city) => {
-                return (
-                  <>
-                    <div className="place-info-list">
-                      <div className="place-info-icon">
-                        <IoIcons.IoMdKey />
-                      </div>
-                      <div>
-                        <p>대여 품목</p>
-                        <li>{city.item}</li>
-                      </div>
-                    </div>
-                    <div className="place-info-list">
-                      <div className="place-info-icon">
-                        <CgIcons.CgProfile />
-                      </div>
-                      <div>
-                        <p>대여 대상</p>
-                        <li>{conditionCheck(city.condition)}</li>
-                      </div>
-                    </div>
-                    <div className="place-info-list">
-                      <div className="place-info-icon">
-                        <CgIcons.CgFileDocument />
-                      </div>
-                      <div>
-                        <p>대여 방법</p>
-                        <li>{city.method}</li>
-                      </div>
-                    </div>
-                    <div className="place-info-list">
-                      <div className="place-info-icon">
-                        <BiIcons.BiTime />
-                      </div>
-                      <div>
-                        <p>대여 기간</p>
-                        <li>{city.period}</li>
-                      </div>
-                    </div>
-                  </>
-                );
-              })}
-              <div className="place-info-list">
-                <div className="place-info-icon">
-                  <GoIcons.GoAlert />
-                </div>
-                <div>
-                  <p>주의사항</p>
-                  <li>신분증 지참</li>
-                </div>
-              </div>
+      {error && "this is error"}
+      {data && (
+        <div className="place-detail-box">
+          <li className="place-name">{data.places.name}</li>
+          <div className="place-info-list">
+            <div className="place-info-icon">
+              <MdIcons.MdLocationOn />
             </div>
-          );
-        })}
+            <div>
+              <p>주소</p>
+              <li>{data.places.address}</li>
+            </div>
+          </div>
+          <div className="place-info-list">
+            <div className="place-info-icon">
+              <FaIcons.FaPhoneAlt />
+            </div>
+            <div>
+              <p>전화번호</p>
+              <li>{data.places.phone}</li>
+            </div>
+          </div>
+          {data.places.cities.map((city) => {
+            return (
+              <>
+                <div className="place-info-list">
+                  <div className="place-info-icon">
+                    <IoIcons.IoMdKey />
+                  </div>
+                  <div>
+                    <p>대여 품목</p>
+                    <li>{city.item}</li>
+                  </div>
+                </div>
+                <div className="place-info-list">
+                  <div className="place-info-icon">
+                    <CgIcons.CgProfile />
+                  </div>
+                  <div>
+                    <p>대여 대상</p>
+                    <li>{conditionCheck(city.condition)}</li>
+                  </div>
+                </div>
+                <div className="place-info-list">
+                  <div className="place-info-icon">
+                    <CgIcons.CgFileDocument />
+                  </div>
+                  <div>
+                    <p>대여 방법</p>
+                    <li>{city.method}</li>
+                  </div>
+                </div>
+                <div className="place-info-list">
+                  <div className="place-info-icon">
+                    <BiIcons.BiTime />
+                  </div>
+                  <div>
+                    <p>대여 기간</p>
+                    <li>{city.period}</li>
+                  </div>
+                </div>
+              </>
+            );
+          })}
+          <div className="place-info-list">
+            <div className="place-info-icon">
+              <GoIcons.GoAlert />
+            </div>
+            <div>
+              <p>주의사항</p>
+              <li>신분증 지참</li>
+            </div>
+          </div>
+        </div>
+      )}
+      )
     </div>
   );
 };

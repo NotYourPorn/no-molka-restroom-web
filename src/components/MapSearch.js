@@ -59,8 +59,8 @@ const MapSearch = () => {
         </div>
       </div>
       <div className="search-result-box">
-        {/* <CityResult cityName={cityName} /> */}
-        <PlaceResult />
+        <CityResult cityName={cityName} />
+        {/* {<PlaceResult />} */}
         {/* <MapTypeData /> */}
       </div>
       <div className="search-register-box">

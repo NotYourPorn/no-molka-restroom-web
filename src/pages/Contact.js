@@ -26,7 +26,7 @@ function Contact() {
         <button>Send</button>
       </div>
 
-      <div className="info-box">
+      <div className="contact-info-box">
         <div className="info-inner-box">
           <img src={Logo} alt="Logo" className="Logo" />
           <div className="info-cheer"></div>
