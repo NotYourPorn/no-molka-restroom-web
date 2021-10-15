@@ -30,7 +30,7 @@ const CityResult = (props) => {
   return (
     <div>
       {loading && "loading"}
-      {error && "There is an error"}
+      {error && "검색을 다시 해주세요."}
       {data &&
         data.cities.map((city) => {
           return (

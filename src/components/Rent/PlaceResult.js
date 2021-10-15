@@ -13,9 +13,9 @@ import * as GoIcons from "react-icons/go";
 
 const conditionCheck = (condition) => {
   if (condition.includes("C")) {
-    return <li>관리자, 일반 시민 대상</li>;
+    return <p>관리자, 일반 시민 대상</p>;
   } else {
-    return <li>건물 / 시설물 관리자, 소유자 대상</li>;
+    return <p>건물 / 시설물 관리자, 소유자 대상</p>;
   }
 };
 
@@ -31,14 +31,15 @@ const PlaceResult = (props) => {
       {error && "this is error"}
       {data && (
         <div className="place-detail-box">
+          {console.log(currentId)}
           <li className="place-name">{data.places.name}</li>
           <div className="place-info-list">
             <div className="place-info-icon">
               <MdIcons.MdLocationOn />
             </div>
             <div>
-              <p>주소</p>
-              <li>{data.places.address}</li>
+              <p className="place-info-tag">주소</p>
+              <p>{data.places.address}</p>
             </div>
           </div>
           <div className="place-info-list">
@@ -46,8 +47,8 @@ const PlaceResult = (props) => {
               <FaIcons.FaPhoneAlt />
             </div>
             <div>
-              <p>전화번호</p>
-              <li>{data.places.phone}</li>
+              <p className="place-info-tag">전화번호</p>
+              <p>{data.places.phone}</p>
             </div>
           </div>
           {data.places.cities.map((city) => {
@@ -58,8 +59,8 @@ const PlaceResult = (props) => {
                     <IoIcons.IoMdKey />
                   </div>
                   <div>
-                    <p>대여 품목</p>
-                    <li>{city.item}</li>
+                    <p className="place-info-tag">대여 품목</p>
+                    <p>{city.item}</p>
                   </div>
                 </div>
                 <div className="place-info-list">
@@ -67,8 +68,8 @@ const PlaceResult = (props) => {
                     <CgIcons.CgProfile />
                   </div>
                   <div>
-                    <p>대여 대상</p>
-                    <li>{conditionCheck(city.condition)}</li>
+                    <p className="place-info-tag">대여 대상</p>
+                    <p>{conditionCheck(city.condition)}</p>
                   </div>
                 </div>
                 <div className="place-info-list">
@@ -76,8 +77,8 @@ const PlaceResult = (props) => {
                     <CgIcons.CgFileDocument />
                   </div>
                   <div>
-                    <p>대여 방법</p>
-                    <li>{city.method}</li>
+                    <p className="place-info-tag">대여 방법</p>
+                    <p>{city.method}</p>
                   </div>
                 </div>
                 <div className="place-info-list">
@@ -85,8 +86,8 @@ const PlaceResult = (props) => {
                     <BiIcons.BiTime />
                   </div>
                   <div>
-                    <p>대여 기간</p>
-                    <li>{city.period}</li>
+                    <p className="place-info-tag">대여 기간</p>
+                    <p>{city.period}</p>
                   </div>
                 </div>
               </>
@@ -97,13 +98,12 @@ const PlaceResult = (props) => {
               <GoIcons.GoAlert />
             </div>
             <div>
-              <p>주의사항</p>
-              <li>신분증 지참</li>
+              <p className="place-info-tag">주의사항</p>
+              <p>신분증 지참</p>
             </div>
           </div>
         </div>
       )}
-      )
     </div>
   );
 };

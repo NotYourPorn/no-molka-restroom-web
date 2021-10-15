@@ -82,7 +82,7 @@ const MapContent = () => {
     if (loading) {
       console.log("this is loading");
     }
-    if (data) {
+    if (cacheData.mapInfoVar && data) {
       data.cities.forEach((city) => {
         city.places.forEach((place) => {
           Pos = trimPos(place.pos[0]);

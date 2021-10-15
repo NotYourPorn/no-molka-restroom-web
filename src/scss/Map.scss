@@ -182,6 +182,7 @@ input:focus {
     min-width: 42px;
     align-items: center;
     justify-content: center;
+    margin-right: 12px;
     border-radius: 24px;
     display: flex;
 
@@ -194,6 +195,9 @@ input:focus {
   .place-info-list {
     display: flex;
     align-items: center;
+    margin-left: 10px;
+    margin-top: 12px;
+    margin-bottom: 12px;
   }
 }
 
@@ -217,3 +221,7 @@ input:focus {
 //     font-size: 0.8rem;
 //   }
 // }
+
+.place-info-tag {
+  font-weight: bold;
+}

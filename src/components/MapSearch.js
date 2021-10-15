@@ -14,7 +14,7 @@ import { mapInfoVar } from "../server/cache";
 
 const MapSearch = () => {
   const [searchText, setSearchText] = useState();
-  const [cityName, setCityName] = useState("서울");
+  const [cityName, setCityName] = useState();
 
   const handleChange = useCallback((e) => {
     setSearchText(e.target.value);
