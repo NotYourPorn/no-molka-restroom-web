@@ -15,10 +15,9 @@ section {
 }
 
 .logo-box {
-  height: 44px;
-  padding-top: 14px;
-  padding-right: 19px;
-  padding-left: 24px;
+  height: 50px;
+  padding-right: 18px;
+  padding-left: 18px;
   background-color: $prime-color-3;
   display: flex;
   color: white;
@@ -47,6 +46,7 @@ section {
 .search-bar {
   height: 100%;
   width: 430px;
+  min-width: 310px;
   background-color: #faf8f8;
 }
 
@@ -54,13 +54,14 @@ section {
   background-color: $prime-color-3;
   display: flex;
   align-items: center;
-  height: 75px;
+  height: 65px;
+  padding-bottom: 7px;
 
   .search-area {
     background-color: white;
-    margin-left: 25px;
+    margin-left: 18px;
     border-radius: 8px;
-    width: 260px;
+    width: 272px;
 
     button {
       color: black;
@@ -101,7 +102,9 @@ input:focus {
 }
 
 .search-result-box {
-  height: calc(93% - 95px);
+  display: flex;
+  flex-direction: column;
+  height: 84%;
   background-color: white;
   border-top: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
@@ -224,4 +227,42 @@ input:focus {
 
 .place-info-tag {
   font-weight: bold;
+}
+
+.place-detail-box {
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+
+.place-info-text {
+  font-size: 13px;
+}
+
+.map-type-box {
+  height: 150px;
+  border: solid 3px;
+  border-radius: 6px;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 21px;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  .type-title-box {
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+  .type-title {
+    font-size: 1.4rem;
+  }
+
+  svg {
+    height: 70px;
+    width: 70px;
+  }
 }

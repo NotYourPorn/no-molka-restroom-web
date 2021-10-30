@@ -13,9 +13,9 @@ import * as GoIcons from "react-icons/go";
 
 const conditionCheck = (condition) => {
   if (condition.includes("C")) {
-    return <p>관리자, 일반 시민 대상</p>;
+    return <p className="place-info-text">관리자, 일반 시민 대상</p>;
   } else {
-    return <p>건물 / 시설물 관리자, 소유자 대상</p>;
+    return <p className="place-info-text">건물 / 시설물 관리자, 소유자 대상</p>;
   }
 };
 
@@ -31,15 +31,13 @@ const PlaceResult = (props) => {
       {error && "this is error"}
       {data && (
         <div className="place-detail-box">
-          {console.log(currentId)}
-          <li className="place-name">{data.places.name}</li>
           <div className="place-info-list">
             <div className="place-info-icon">
               <MdIcons.MdLocationOn />
             </div>
             <div>
               <p className="place-info-tag">주소</p>
-              <p>{data.places.address}</p>
+              <p className="place-info-text">{data.places.address}</p>
             </div>
           </div>
           <div className="place-info-list">
@@ -48,7 +46,7 @@ const PlaceResult = (props) => {
             </div>
             <div>
               <p className="place-info-tag">전화번호</p>
-              <p>{data.places.phone}</p>
+              <p className="place-info-text">{data.places.phone}</p>
             </div>
           </div>
           {data.places.cities.map((city) => {
@@ -60,7 +58,7 @@ const PlaceResult = (props) => {
                   </div>
                   <div>
                     <p className="place-info-tag">대여 품목</p>
-                    <p>{city.item}</p>
+                    <p className="place-info-text">{city.item}</p>
                   </div>
                 </div>
                 <div className="place-info-list">
@@ -69,7 +67,9 @@ const PlaceResult = (props) => {
                   </div>
                   <div>
                     <p className="place-info-tag">대여 대상</p>
-                    <p>{conditionCheck(city.condition)}</p>
+                    <p className="place-info-text">
+                      {conditionCheck(city.condition)}
+                    </p>
                   </div>
                 </div>
                 <div className="place-info-list">
@@ -78,7 +78,7 @@ const PlaceResult = (props) => {
                   </div>
                   <div>
                     <p className="place-info-tag">대여 방법</p>
-                    <p>{city.method}</p>
+                    <p className="place-info-text">{city.method}</p>
                   </div>
                 </div>
                 <div className="place-info-list">
@@ -87,7 +87,7 @@ const PlaceResult = (props) => {
                   </div>
                   <div>
                     <p className="place-info-tag">대여 기간</p>
-                    <p>{city.period}</p>
+                    <p className="place-info-text">{city.period}</p>
                   </div>
                 </div>
               </>
@@ -99,7 +99,7 @@ const PlaceResult = (props) => {
             </div>
             <div>
               <p className="place-info-tag">주의사항</p>
-              <p>신분증 지참</p>
+              <p className="place-info-text">신분증 지참</p>
             </div>
           </div>
         </div>

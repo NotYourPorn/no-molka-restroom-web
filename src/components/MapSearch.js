@@ -8,13 +8,30 @@ import * as RiIcons from "react-icons/ri";
 
 import MapTypeData from "./Map/MapTypeData";
 import CityResult from "./Rent/CityResult";
-import PlaceResult from "./Rent/PlaceResult";
+import MapChoice from "./MapChoice";
 
 import { mapInfoVar } from "../server/cache";
 
 const MapSearch = () => {
   const [searchText, setSearchText] = useState();
+  const [searchType, setSearchType] = useState();
+
   const [cityName, setCityName] = useState();
+
+  useEffect(() => setSearchType(searchType), [searchType]);
+
+  const chooseType = () => {
+    switch (searchType) {
+      case "rent":
+        return <CityResult cityName={cityName} />;
+      case "crime":
+        return console.log("crime");
+      case "check":
+        return console.log("check");
+      default:
+        return <MapChoice setSearchType={setSearchType} />;
+    }
+  };
 
   const handleChange = useCallback((e) => {
     setSearchText(e.target.value);
@@ -59,12 +76,9 @@ const MapSearch = () => {
         </div>
       </div>
       <div className="search-result-box">
-        <CityResult cityName={cityName} />
-        {/* {<PlaceResult />} */}
         {/* <MapTypeData /> */}
-      </div>
-      <div className="search-register-box">
-        <span>신규장소 등록</span>
+        {!searchType && <MapChoice setSearchType={setSearchType} />}
+        {searchType && chooseType()}
       </div>
     </div>
   );
